@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block head %}
+    {{ super() }}
+	<style>
+		.negative {
+		color: red;
+		}
+		.positive {
+			color: lime;
+		}
+	</style>
+{% endblock %}
+
+{% block content %}
+	{{ super() }}
+			<p class="{{ 'negative' if calculated_number < 0 else 'positive' }}">
+				{{ calculated_number }}
+			</p>
+{% endblock %}
+

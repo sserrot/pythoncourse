@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+	{% block head %}
+	<title>Flask Multiplier </title>
+	<style>
+	body {background-color: black;}
+	h1 {color: lime;text-align:center;}
+	p {color: black;text-align:center;}
+	</style>
+	{% endblock %}
+</head>
+<body>
+{% block content %}
+<form class="form-horizontal" method="post" action="/calc">
+	<fieldset>
+	<h1>Flask Multiplier</h1>
+		<div style="text-align:center">
+				<p>
+					<!-- Text input-->
+					<div class="form-group">
+					  <div class="col-md-4">
+						 <input type="number" name="input_number" placeholder="Enter a number" class="form-control input-md">
+					  </div>
+					</div>
+					<br>
+					<!-- Button -->
+					  <label class="col-md-4 control-label" for="singlebutton"></label>
+					  <div class="col-md-4">
+						<button id="singlebutton" name="singlebutton" class="btn btn-primary">Calculate</button>
+					  </div>
+			</p>
+			</div>
+	</fieldset>
+</form>
+{% endblock %}
+</body>
